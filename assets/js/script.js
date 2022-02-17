@@ -58,22 +58,43 @@ var generatePassword = function() {
   
   // code for second prompt that asks user if they want to include uppercase letters 
   
-    var input2 = window.prompt("Do you want your password to include upper case letters? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no");
+    var input2 = window.prompt("Do you want your password to include uppercase letters? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)");
       if (input2 == null || input2 == "") {
         console.log ("You selected that you do not want UPPERCASE letters");
       }
       else if (input2 == "yes" || input2 == "Yes" || input2 == "YES") {
         console.log("You selected that you want UPPERCASE letters");
+        var upper = input2;
       }
     
 
   // code for third prompt that asks user if they want to include lower case letters
-
+     var input3 = window.prompt("Do you want your password to include lowercase letters? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)");
+       if (input3 == null || input3 == "") {
+         console.log("You selected that you do not want lowercase letters");
+       } 
+       else if (input3 == "yes" || input3 == "Yes" || input3 == "YES") {
+         console.log("You selected that you do want lowercase letters");
+         var lower = input3;
+       }
   // code for fourth prompt that asks user if they want to include numbers/integers
-
+      var input4 = window.prompt("Do you want your password to include integers? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)")
+       if (input4 == null || input4 == "") {
+         console.log("You selected that you do not want integers");
+       }
+       else if (input4 == "yes" || input4 == "Yes" || input4 == "YES") {
+         console.log("You selected that you do want integers");
+         var integers = input4;
+       }
   // code for fifth prompt that asks user if they want to inlcude special characters
-
-
+       var input5 = window.prompt("Do you want your password to include special characters? (type 'yes' , 'Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)")
+        if(input5 == null || input5 == "") {
+          console.log("You selected that you do not want special characters.");
+        }
+        else if (input5 == "yes" || input5 == "Yes" || input5 == "YES") {
+          console.log("You selected that you very much do want special characters.");
+          var spesh = input5;
+        }
 // placeholder for returned generated password here, later will be actual generated password.
   return "generated password";
 }
