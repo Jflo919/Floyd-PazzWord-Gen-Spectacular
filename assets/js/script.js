@@ -28,13 +28,56 @@ var generatePassword = function() {
   console.log("You clicked the button");
   
   // ask user for the length of the desired password,must be >= 8 characters and <= 128 characters.
-  window.prompt("Please enter the desired character length(between 8 and 128 characters) of your password to be generated.");
+  var input1 = window.prompt("Please enter the desired character length(between 8 and 128 characters) of your password to be generated.");
+ // write a conditional statement to break out /stop function if user presses cancel, obviously generated password shows up regardless of button clicked
+     // parseInt converts from string to number, radix is 10, it seems to work, not too sure why 
+    console.log(input1 , "raw input" , typeof input1);
+    if (input1 === null ) {
+      return null;
+   }
+  
+  else if (input1 >= 8 && input1 <= 128 ) {
+    console.log(input1 +  " characters long ");
+    var length = input1; 
+   // var convertedString = parseInt(input1 , 10 );
+    //console.log(convertedString);
+   
+    
+   //if (typeof convertedString === Number &&  !isNaN(convertedString))
+   //{
+
+    
+   } else {
+    window.alert("You need to provide a valid integer from 8 thru 128!");
+    return null;
+   } 
+
+    
+    
+   
+  
+  // code for second prompt that asks user if they want to include uppercase letters 
+  
+    var input2 = window.prompt("Do you want your password to include upper case letters? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no");
+      if (input2 == null || input2 == "") {
+        console.log ("You selected that you do not want UPPERCASE letters");
+      }
+      else if (input2 == "yes" || input2 == "Yes" || input2 == "YES") {
+        console.log("You selected that you want UPPERCASE letters");
+      }
+    
+
+  // code for third prompt that asks user if they want to include lower case letters
+
+  // code for fourth prompt that asks user if they want to include numbers/integers
+
+  // code for fifth prompt that asks user if they want to inlcude special characters
 
 
 // placeholder for returned generated password here, later will be actual generated password.
   return "generated password";
 }
-
+  
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -43,7 +86,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+ 
   passwordText.value = password;
 
 }
