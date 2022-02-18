@@ -94,7 +94,17 @@ var generatePassword = function() {
         else if (input5 == "yes" || input5 == "Yes" || input5 == "YES") {
           console.log("You selected that you very much do want special characters.");
           var spesh = input5;
+          ensure([spesh, integers, lower, upper, length]);
         }
+  // place code to ensure at least one of the five password criteria is selected before continuing.      
+        function ensure() {
+          var inputArray = [spesh, integers, lower, upper, length];
+          console.log(inputArray);
+        }
+        
+  // code to generate a random index number(s) based on user inputs and utilizes Math.random and Math.floor... I think.
+  
+  
 // placeholder for returned generated password here, later will be actual generated password.
   return "generated password";
 }
