@@ -61,6 +61,8 @@ var generatePassword = function() {
     var input2 = window.prompt("Do you want your password to include uppercase letters? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)");
       if (input2 == null || input2 == "") {
         console.log ("You selected that you do not want UPPERCASE letters");
+        var input2 = "no";
+        var upper = input2;
       }
       else if (input2 == "yes" || input2 == "Yes" || input2 == "YES") {
         console.log("You selected that you want UPPERCASE letters");
@@ -72,6 +74,9 @@ var generatePassword = function() {
      var input3 = window.prompt("Do you want your password to include lowercase letters? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)");
        if (input3 == null || input3 == "") {
          console.log("You selected that you do not want lowercase letters");
+         var input3 = "no";
+         var lower = input3;
+         
        } 
        else if (input3 == "yes" || input3 == "Yes" || input3 == "YES") {
          console.log("You selected that you do want lowercase letters");
@@ -81,6 +86,9 @@ var generatePassword = function() {
       var input4 = window.prompt("Do you want your password to include integers? (type 'yes','Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)")
        if (input4 == null || input4 == "") {
          console.log("You selected that you do not want integers");
+         var input4 = "no";
+         var integers = input4;
+         
        }
        else if (input4 == "yes" || input4 == "Yes" || input4 == "YES") {
          console.log("You selected that you do want integers");
@@ -90,12 +98,16 @@ var generatePassword = function() {
        var input5 = window.prompt("Do you want your password to include special characters? (type 'yes' , 'Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)")
         if(input5 == null || input5 == "") {
           console.log("You selected that you do not want special characters.");
+        var  input5 = "no";
+        var spesh = input5;
+          console.log(input5);
         }
         else if (input5 == "yes" || input5 == "Yes" || input5 == "YES") {
           console.log("You selected that you very much do want special characters.");
           var spesh = input5;
-          ensure([spesh, integers, lower, upper, length]);
+          
         }
+        ensure([spesh, integers, lower, upper, length]);
   // place code to ensure at least one of the five password criteria is selected before continuing.      
         function ensure() {
           var inputArray = [spesh, integers, lower, upper, length];
