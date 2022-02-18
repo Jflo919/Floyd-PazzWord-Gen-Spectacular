@@ -109,20 +109,35 @@ var generatePassword = function() {
           
         }
         ensure([spesh, integers, lower, upper, length]);
-  // place code to ensure at least one of the five password criteria is selected before continuing.      
+          // place code to ensure at least one of the five password criteria is selected before continuing.      
         function ensure() {
           var inputArray = [spesh, integers, lower, upper, length];
           console.log(inputArray);
           if (spesh === "no" && integers === "no" && lower === "no" && upper === "no") {
-          window.alert("You need to say 'Yes' to at least one criteria for password!");
-            
-          
+          window.alert("You need to say 'Yes' to at least one criteria for the password!");
+          // bring user back to the beginning of prompts  
+          generatePassword();
           } else {
+          
+            // maybe write a 
+            // converts variable length (which is the input of the number of total characters desired in password) from string to integer.
+          parseInt(length);
+          console.log(length)
+          
+          console.log(numbers);
+
+              // code to generate a random index number(s) based on user inputs and utilizes Math.random and Math.floor... I think.
+          for (var i = 0; i < finalArr.length; i++){
 
           }
-        }
+             // var randomNumber =    
+
+            
+
+          }
+        } 
        
-  // code to generate a random index number(s) based on user inputs and utilizes Math.random and Math.floor... I think.
+  
   
   
 // placeholder for returned generated password here, later will be actual generated password.
