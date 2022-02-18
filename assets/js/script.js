@@ -23,6 +23,7 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "@", "?", "#", "%", "^", "&", "*", "~" ];
+var finalArr = [];
 
 var generatePassword = function() {
   console.log("You clicked the button");
@@ -96,7 +97,7 @@ var generatePassword = function() {
        }
   // code for fifth prompt that asks user if they want to inlcude special characters
        var input5 = window.prompt("Do you want your password to include special characters? (type 'yes' , 'Yes', or 'YES' for yes.  Click Cancel for no or leave box empty for no)")
-        if(input5 == null || input5 == "") {
+        if (input5 == null || input5 == "") {
           console.log("You selected that you do not want special characters.");
         var  input5 = "no";
         var spesh = input5;
@@ -112,8 +113,15 @@ var generatePassword = function() {
         function ensure() {
           var inputArray = [spesh, integers, lower, upper, length];
           console.log(inputArray);
+          if (spesh === "no" && integers === "no" && lower === "no" && upper === "no") {
+          window.alert("You need to say 'Yes' to at least one criteria for password!");
+            
+          
+          } else {
+
+          }
         }
-        
+       
   // code to generate a random index number(s) based on user inputs and utilizes Math.random and Math.floor... I think.
   
   
