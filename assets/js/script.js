@@ -135,8 +135,8 @@ var generatePassword = function() {
             finalArr.push(arr[randomNumber])
           }
           finalArr.length = length
-
-             // var randomNumber =    
+    
+                
 
             
 
