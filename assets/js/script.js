@@ -119,17 +119,23 @@ var generatePassword = function() {
           generatePassword();
           } else {
           
-            // maybe write a 
+            // maybe write an else if conditional here that will push the global arrays that match the user preferences to the empty array, and from there loop thorugh the new array, using a randomly generated index number? still run the risk of not getting all of the user's criteria to show up in the new password.
             // converts variable length (which is the input of the number of total characters desired in password) from string to integer.
+            // try .join and set finalArr.length to match var length (user's desired number of characters)
           parseInt(length);
           console.log(length)
           
           console.log(numbers);
 
               // code to generate a random index number(s) based on user inputs and utilizes Math.random and Math.floor... I think.
-          for (var i = 0; i < finalArr.length; i++){
-
+              var arr = [...numbers]
+              for (var i = 0; i < arr.length; i++){
+            
+            var randomNumber = Math.floor(Math.random() * arr.length)
+            finalArr.push(arr[randomNumber])
           }
+          finalArr.length = length
+
              // var randomNumber =    
 
             
@@ -141,7 +147,7 @@ var generatePassword = function() {
   
   
 // placeholder for returned generated password here, later will be actual generated password.
-  return "generated password";
+  return finalArr.join('');
 }
   
 
