@@ -16,7 +16,7 @@ This password generator app adds the following functionality to the given html, 
 
 ### Website Screenshot:
 
-![Alt text](/assets/images/password_site.jpgjpg?raw=true "Screenshot 1")
+![Alt text](/assets/images/password_site.jpg?raw=true "Screenshot 1")
 
 
 ### Link URL: https://jflo919.github.io/Floyd-PazzWord-Gen-Spectacular/
