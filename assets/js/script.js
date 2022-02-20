@@ -6,10 +6,10 @@ var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
 var special = ["!", "@", "?", "#", "%", "^", "&", "*", "~", "$", ">", "<", "/", "(", ")", "!", "@", "?", "#", ")", "%", "$" ];
 
 var PROMPT_ONE = "Please enter the desired character length(between 8 and 128 characters) of your generated password.";
-var PROMPT_TWO = "Do you want your password to include uppercase letters? (type 'yes' , 'YES' , or 'Yes' for yes.  Click Cancel for no or leave box empty for no)";
-var PROMPT_THREE = "Do you want your password to include lowercase letters? (type 'yes' , 'YES' , or 'Yes' for yes.  Click Cancel for no or leave box empty for no)";
-var PROMPT_FOUR = "Do you want your password to include integers? (type 'yes' , 'YES' , or 'Yes' for yes.  Click Cancel for no or leave box empty for no)";
-var PROMPT_FIVE = "Do you want your password to include special characters? (type 'yes' , 'YES' , or 'Yes' for yes.  Click Cancel for no or leave box empty for no)";
+var PROMPT_TWO = "Do you want your password to include uppercase letters? (type 'yes' , 'YES' , or 'Yes' for yes.   leave box empty for no)";
+var PROMPT_THREE = "Do you want your password to include lowercase letters? (type 'yes' , 'YES' , or 'Yes' for yes.   leave box empty for no)";
+var PROMPT_FOUR = "Do you want your password to include integers? (type 'yes' , 'YES' , or 'Yes' for yes.   leave box empty for no)";
+var PROMPT_FIVE = "Do you want your password to include special characters? (type 'yes' , 'YES' , or 'Yes' for yes.   leave box empty for no)";
 
 var generatePassword = function() {
   var finalPassword = '';
