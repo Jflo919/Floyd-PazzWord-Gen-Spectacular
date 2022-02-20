@@ -35,10 +35,48 @@ var generatePassword = function() {
    } 
 
    // code for second prompt that asks users if they want to include uppercase letters 
- var promptTwoResponse = window.prompt(PROMPT_TWO);    
-   
-               
-      
+ var promptTwoResponse = window.prompt(PROMPT_TWO);
+ if (promptTwoResponse == "yes" || promptTwoResponse == "Yes" || promptTwoResponse == "YES" || promptTwoResponse == "y"|| promptTwoResponse == "Y") {
+   passwordCharacterOptions.push(upperCase);
+   // check to see if this works
+   console.log(passwordCharacterOptions);
+ }  
+ 
+ // code for third prompt that asks user if they want to include lower case letters
+ var promptThreeResponse = window.prompt(PROMPT_THREE);
+ if (promptThreeResponse == "yes" || promptThreeResponse == "Yes" || promptThreeResponse == "YES" || promptThreeResponse == "Y" || promptThreeResponse == "y") {
+   passwordCharacterOptions.push(lowerCase);
+   // check to see if this works or not
+   console.log(passwordCharacterOptions);
+ }
+// code for fourth prompt that asks user if they want to include integers in their password   
+ var promptFourResponse = window.prompt(PROMPT_FOUR);
+ if (promptFourResponse == "yes" || promptFourResponse == "Yes" || promptFourResponse == "YES" || promptFourResponse == "Y" || promptFourResponse == "y") {
+   passwordCharacterOptions.push(numbers);
+   // check to see if this works
+   console.log(passwordCharacterOptions);
+ }              
+ var promptFiveResponse = window.prompt(PROMPT_FIVE);
+ if (promptFiveResponse == "yes" || promptFiveResponse == "Yes" || promptFiveResponse == "YES" || promptFiveResponse == "Y" || promptFiveResponse == "y") {
+   passwordCharacterOptions.push(special);
+   // check to see if this works
+   console.log(passwordCharacterOptions);
+ }     
+ // make sure user has to select at least one criteria
+ if (promptTwoResponse === "" && promptThreeResponse === "" && promptFourResponse === "" && promptFiveResponse === "") {
+   window.alert("You need to select at least one criteria for your password!");
+   generatePassword();
+ }
+
+ // code to generate a random index and convert promptOneResponse to an integer, desired character length is still a string
+ for (var i = 0; i <parseInt(promptOneResponse, 10); i++) {
+   // creates a random number between 0 and 1, multiplied by the length of the passwordCharacterOptions array, this will be one of the two indexes used to generate the final password. 
+   var typeIdx = Math.floor(Math.random() * passwordCharacterOptions.length);
+   console.log(passwordCharacterOptions.length)
+   var typeOptions = passwordCharacterOptions[typeIdx];
+   var charIdx = Math.floor(Math.random() * typeOptions.length);
+   finalPassword += passwordCharacterOptions[typeIdx][charIdx];
+ }
   
   return finalPassword;
   }
